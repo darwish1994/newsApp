@@ -17,6 +17,9 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField("String", "BASE_URL", BASE_URL)
+        buildConfigField("String", "API_KEY", apiKey)
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,24 +47,24 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
 
     // coroutines
-    implementation coroutines.coroutines_core
-    implementation coroutines.coroutines_android
+    implementation coroutines.values()
 
     // hilt
-
     implementation hilt.hilt_android
     kapt hilt.hilt_kapt
 
-
     // navigation
-    implementation navigation.navigation_fragment
-    implementation navigation.navigation_ui
+    implementation navigation.values()
+
+    // retrofit
+    implementation retrofit.values()
 
 }
 
