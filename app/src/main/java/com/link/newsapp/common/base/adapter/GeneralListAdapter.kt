@@ -32,6 +32,11 @@ abstract class GeneralListAdapter<T, VB : ViewBinding> : RecyclerView.Adapter<Ba
         }
     }
 
+    fun clearData(){
+        mData.clear()
+        notifyDataSetChanged()
+    }
+
 
     override fun getItemCount(): Int = mData.size
 

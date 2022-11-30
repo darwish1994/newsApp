@@ -1,6 +1,7 @@
 package com.link.newsapp.presenter.article
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -37,10 +38,10 @@ class ArticleFragment : Fragment(R.layout.fragment_article), ItemClickListener {
     }
 
     private fun loadArticles() {
+        adapter.clearData()
         if (!viewModel.getArticleLiveData().hasActiveObservers())
             observe(viewModel.getArticleLiveData(), ::articleObserver)
         // clear adapter data
-        adapter.swipeData(arrayListOf())
         viewModel.getArticles()
 
     }
