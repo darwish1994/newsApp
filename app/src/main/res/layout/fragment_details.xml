@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_three"
+    android:fillViewport="true"
+    tools:context=".presenter.details.DetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/container_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-24dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_details"
+            app:layout_constraintEnd_toEndOf="@+id/im_news"
+            app:layout_constraintStart_toStartOf="@+id/im_news"
+            app:layout_constraintTop_toTopOf="@+id/im_news" />
+
+        <ImageView
+            android:id="@+id/im_news"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintDimensionRatio="w,1:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/im_news"
+            app:layout_constraintEnd_toEndOf="@+id/im_news" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/im_news"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/im_news"
+            app:layout_constraintTop_toBottomOf="@+id/im_news"
+            tools:text="Amazing" />
+
+        <TextView
+            android:id="@+id/tv_creator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="@id/im_news"
+            app:layout_constraintStart_toStartOf="@id/im_news"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="By Lives" />
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="@id/im_news"
+            app:layout_constraintStart_toStartOf="@id/im_news"
+            app:layout_constraintTop_toBottomOf="@+id/tv_creator"
+            tools:text="By Lives" />
+
+
+        <Button
+            android:id="@+id/btn_browser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/black"
+            android:padding="12dp"
+            android:text="@string/open_website"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/im_news"
+            app:layout_constraintStart_toStartOf="@+id/im_news"
+            app:layout_constraintTop_toBottomOf="@+id/container_bg"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

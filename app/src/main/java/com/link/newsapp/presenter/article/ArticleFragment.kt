@@ -8,6 +8,7 @@ import com.link.newsapp.R
 import com.link.newsapp.common.base.adapter.ItemClickListener
 import com.link.newsapp.common.dialog_util.DialogUtil
 import com.link.newsapp.common.extention.loading
+import com.link.newsapp.common.extention.navTo
 import com.link.newsapp.common.extention.observe
 import com.link.newsapp.common.extention.viewBinding
 import com.link.newsapp.data.model.Article
@@ -80,7 +81,9 @@ class ArticleFragment : Fragment(R.layout.fragment_article), ItemClickListener {
     }
 
     override fun <T> onItemClicked(item: T) {
-
+        if (item is Article) {
+            navTo(ArticleFragmentDirections.actionArticleFragmentToDetailsFragment(item))
+        }
 
     }
 
