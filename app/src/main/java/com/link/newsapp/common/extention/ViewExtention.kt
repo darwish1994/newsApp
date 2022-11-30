@@ -27,7 +27,8 @@ fun ProgressBar.loading(status: Resource<*>) {
 
 fun ImageView.loadImage(url:String){
     Glide.with(this).load(url)
-        .error(R.drawable.gallery)
+        .error(R.drawable.placeholder)
+        .placeholder(R.drawable.placeholder)
         .transition(DrawableTransitionOptions.withCrossFade())
         .apply(RequestOptions.centerCropTransform())
         .into(this)
