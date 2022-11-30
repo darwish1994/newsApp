@@ -2,9 +2,9 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,8 +63,10 @@
                     android:drawablePadding="16dp"
                     android:paddingStart="24dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="24dp"
                     android:paddingBottom="10dp"
                     android:text="@string/explore"
+                    android:textAlignment="viewStart"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -79,8 +81,10 @@
                     android:drawablePadding="16dp"
                     android:paddingStart="24dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="24dp"
                     android:paddingBottom="10dp"
                     android:text="@string/live_chat"
+                    android:textAlignment="viewStart"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -89,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+
                     android:background="@drawable/radio_bg"
                     android:button="@null"
 
@@ -96,8 +101,10 @@
                     android:drawablePadding="16dp"
                     android:paddingStart="24dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="24dp"
                     android:paddingBottom="10dp"
                     android:text="@string/gallery"
+                    android:textAlignment="viewStart"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -112,8 +119,10 @@
                     android:drawablePadding="16dp"
                     android:paddingStart="24dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="24dp"
                     android:paddingBottom="10dp"
                     android:text="@string/wish_list"
+                    android:textAlignment="viewStart"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -128,8 +137,10 @@
                     android:drawablePadding="16dp"
                     android:paddingStart="24dp"
                     android:paddingTop="10dp"
+                    android:paddingEnd="24dp"
                     android:paddingBottom="10dp"
                     android:text="@string/e_magazine"
+                    android:textAlignment="viewStart"
                     android:textSize="18sp" />
 
 
