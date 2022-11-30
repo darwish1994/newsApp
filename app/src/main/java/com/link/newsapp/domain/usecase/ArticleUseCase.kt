@@ -6,10 +6,11 @@ import com.link.newsapp.network.Resource
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class GetNextWebUseCase @Inject constructor(private val articleRepo: ArticleRepo) {
+class ArticleUseCase @Inject constructor(private val articleRepo: ArticleRepo) {
 
     operator fun invoke() = flow {
         emit(Resource.Loading())
+        emit(articleRepo.getArticles(ArticlesCategories.associated_press))
         emit(articleRepo.getArticles(ArticlesCategories.next_web))
     }
 }

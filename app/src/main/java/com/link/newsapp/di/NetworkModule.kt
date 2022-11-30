@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.link.newsapp.BuildConfig
+import com.link.newsapp.common.extention.timeFormat
 import com.link.newsapp.network.NetworkConstant
 import com.link.newsapp.network.NetworkHelper
 import com.link.newsapp.network.NetworkInterceptor
@@ -56,7 +57,7 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideGson(): Gson = GsonBuilder()
-        .setDateFormat("yyyy-MM-dd HH:mm:ss")
+        .setDateFormat(timeFormat)
         .create()
 
     @Provides
