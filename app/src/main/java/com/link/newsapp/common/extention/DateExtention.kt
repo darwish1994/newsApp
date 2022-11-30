@@ -7,7 +7,7 @@ import java.util.*
 const val timeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 const val dayFormat = "MMM dd,yyyy"
 
-fun Date.convertToStringDate(): String {
+fun Date.convertDateToString(): String {
     val sdf = SimpleDateFormat(dayFormat, Locale.getDefault())
     return sdf.format(this)
 }

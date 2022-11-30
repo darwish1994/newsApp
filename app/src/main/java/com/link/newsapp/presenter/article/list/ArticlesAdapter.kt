@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.link.newsapp.common.base.adapter.BaseHolder
 import com.link.newsapp.common.base.adapter.GeneralListAdapter
-import com.link.newsapp.common.extention.convertToStringDate
+import com.link.newsapp.common.extention.convertDateToString
 import com.link.newsapp.common.extention.loadImage
 import com.link.newsapp.data.model.Article
 import com.link.newsapp.databinding.ItemLayoutNewsBinding
@@ -18,7 +18,7 @@ class ArticlesAdapter : GeneralListAdapter<Article, ItemLayoutNewsBinding>() {
             container.apply {
                 tvTitle.text = item.title
                 tvCreator.text = item.author
-                tvDate.text = item.publishedAt?.convertToStringDate()
+                tvDate.text = item.publishedAt?.convertDateToString()
                 item.urlToImage?.let { imNews.loadImage(it) }
             }
         }
