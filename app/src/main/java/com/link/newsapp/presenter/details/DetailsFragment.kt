@@ -7,6 +7,7 @@ import androidx.navigation.fragment.navArgs
 import com.link.newsapp.R
 import com.link.newsapp.common.extention.convertDateToString
 import com.link.newsapp.common.extention.loadImage
+import com.link.newsapp.common.extention.navTo
 import com.link.newsapp.common.extention.viewBinding
 import com.link.newsapp.databinding.FragmentDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,6 +31,10 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
                 // click browser
                 btnBrowser.setOnClickListener {
+                    article.url?.let { url ->
+                        navTo(DetailsFragmentDirections.actionDetailsFragmentToBrowserFragment(url))
+
+                    }
 
                 }
 
